@@ -1,3 +1,4 @@
 language: node_js
+before_script: cd getRandomInt
 node_js:
   - "9"
