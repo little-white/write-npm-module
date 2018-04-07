@@ -2,25 +2,35 @@
 
 前端的同学在项目中经常会用到各种npm modules，那如何写一个自己的npm module呢？本文从零教大家一步步写一个自己的npm module。
 
-### 创建一个账号
+* [创建一个账号](#account)
+* [命令行登录](#login)
+* [创建npm module目录](#create)
+* [写一个简单的module](#write)
+* [单元测试](#test)
+* [发布](#publish)
+* [全局包](#global)
+* [项目包验证](local-test)
+* [全局包验证](global-test)
+
+###<a name="account"></a>创建一个账号
 
 访问[npm官网](https://www.npmjs.com/)注册账号，如果已注册就登录进去。
 
-### 命令行登录
+### <a name="login"></a>命令行登录
 
 ```shell
 npm login // 输入账号、密码、邮箱
 npm whoami // 我这里输出了supershy
 ```
 
-### 创建npm module的目录
+### <a name="create"></a>创建npm module的目录
 
 ```shell
 mkdir getRandomInt && cd getRandomInt
 npm init -y //初始化package.json
 ```
 
-### 写一个简单的module
+### <a name="write"></a>写一个简单的module
 
 新建index.js并写入以下代码
 
@@ -47,7 +57,7 @@ module.exports = getRandomInt;
 
 到了这就已经可以发布了，但为了养成良好的编码习惯，我们需要对这个npm module加入测试代码。
 
-### 测试
+### <a name="test"></a>单元测试
 
 ```
 npm install -S jest
@@ -69,7 +79,7 @@ test('getRandomInt(20, 10)返回10到20内的一个整数', () => {
 npm test
 ```
 
-### 发布
+### <a name="publish"></a>发布
 
 ```shell
 npm publish
@@ -77,7 +87,9 @@ npm publish
 
 > **ps：发布的时候遇到了个小坑，npm module的名字不支持驼峰，在发布的时候会报invalid的错误，需要在package.json中将name改为get-random-int即可发布。**
 
-### 支持全局
+发布成功后可以在https://www.npmjs.com/~你的username找到你的npm module，我的这个包的地址是https://www.npmjs.com/package/get-random-int
+
+### <a name="global"></a>支持全局
 
 我们先看一个简单的例子，首先新建个global
 
@@ -124,3 +136,27 @@ npm version patch # 每次发布需要修改version的值，当然也可以手�
 npm publish
 ```
 
+### <a name="local-test"></a>项目包验证
+
+```shell
+mkdir local-test && cd local-test
+npm install -S get-rarndom-int
+```
+
+```javascript
+// local-test/test.js
+var getRandomInt = require('get-rarndom-int');
+console.log(getRandomInt(10, 5))
+```
+
+```shell
+node test.js # 6 or 7 or 8 or 9
+```
+
+###<a name="global-test"></a>全局包验证
+
+```shell
+mkdir global-test && cd global-test
+npm install -g get-rarndom-int
+get-rarndom-int 10 5 # 6 or 7 or 8 or 9
+```
