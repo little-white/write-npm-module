@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 var getRandomInt = require('../index')
-console.log(getRandomInt(20, 10))
+var arguments = process.argv.slice(2)
+console.log(getRandomInt(parseInt(arguments[0]), parseInt(arguments[1])))

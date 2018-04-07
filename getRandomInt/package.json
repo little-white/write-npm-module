@@ -1,6 +1,6 @@
 {
   "name": "get-random-int",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "通过指定区间来获取随机数",
   "repository": {
     "type": "git",
