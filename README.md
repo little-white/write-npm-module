@@ -156,7 +156,6 @@ node test.js # 6 or 7 or 8 or 9
 ### <a name="global-test"></a>全局包验证
 
 ```shell
-mkdir global-test && cd global-test
 npm install -g get-rarndom-int
 get-rarndom-int 10 5 # 6 or 7 or 8 or 9
 ```
