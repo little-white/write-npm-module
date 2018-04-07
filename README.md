@@ -69,8 +69,11 @@ test('getRandomInt(20, 10)返回10到20内的一个整数', () => {
 npm test
 ```
 
-###发布
+### 发布
 
 ```shell
 npm publish
 ```
+
+> **ps：发布的时候遇到了个小坑，npm module的名字不支持驼峰，在发布的时候会报invalid的错误，需要在package.json中将name改为get-random-int即可发布。**
+
