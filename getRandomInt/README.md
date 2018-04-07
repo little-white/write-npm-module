@@ -1,3 +1,4 @@
+![](https://travis-ci.org/little-white/write-npm-module.svg?branch=master)
 # getRandomInt
 
 通过指定区间来获取随机数
@@ -20,4 +21,3 @@ getRandomInt(5, 1) //2 or 3 or 4
 ```shell
 npm test
 ```
-

@@ -1,7 +1,11 @@
 {
   "name": "get-random-int",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "通过指定区间来获取随机数",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-white/write-npm-module/tree/master/getRandomInt"
+  },
   "main": "index.js",
   "scripts": {
     "test": "jest"
