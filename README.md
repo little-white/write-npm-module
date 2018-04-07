@@ -9,10 +9,10 @@
 * [单元测试](#test)
 * [发布](#publish)
 * [全局包](#global)
-* [项目包验证](local-test)
-* [全局包验证](global-test)
+* [项目包验证](#local-test)
+* [全局包验证](#global-test)
 
-###<a name="account"></a>创建一个账号
+### <a name="account"></a>创建一个账号
 
 访问[npm官网](https://www.npmjs.com/)注册账号，如果已注册就登录进去。
 
@@ -153,7 +153,7 @@ console.log(getRandomInt(10, 5))
 node test.js # 6 or 7 or 8 or 9
 ```
 
-###<a name="global-test"></a>全局包验证
+### <a name="global-test"></a>全局包验证
 
 ```shell
 mkdir global-test && cd global-test
