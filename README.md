@@ -91,14 +91,14 @@ npm publish
 
 ### <a name="global"></a>支持全局
 
-我们先看一个简单的例子，首先新建个global
+我们先看一个简单的例子，首先新建个名为global的文件
 
 ```javascript
 #!/usr/bin/env node
 console.log(process.argv.slice(2))
 ```
 
-第一行表明global.js的执行环境是node，当我们给它一定的权限就变成了可执行文件
+第一行表明global的执行环境是node，当我们给它一定的权限就变成了可执行文件
 
 ```shell
 chmod 777 global # 加上可执行权限
