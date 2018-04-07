@@ -1,4 +1,4 @@
 language: node_js
-before_script: cd getRandomInt
+before_script: cd getRandomInt && npm i
 node_js:
   - "9"
